@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Videy - Video Preview</title>
+    <meta name="description" content="Preview your video">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="nav-outer">
+        <div class="nav-inner">
+            <div class="logo-text">
+                <a href="https://sazumi.moe/">videy</a>
+            </div>
+            <a href="/">
+                <div class="upload-button-nav">
+                    Upload
+                </div>
+            </a>
+            <div class="legal">
+                <div class="legal-menu">
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMobileNavbar()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <div class="legal-item">
+                    <a href="/">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div class="legal-item">
+                    <a href="/">
+                        Terms of Service
+                    </a>
+                </div>
+                <div class="legal-item">
+                    <a>
+                        Abuse
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu">
+        <a href="/">
+            Privacy Policy
+        </a>
+        <a href="/">
+            Terms of Service
+        </a>
+        <a>
+            Abuse
+        </a>
+    </div>
+    <div class="body">
+        <div class="main-area">
+            <div class="video">
+                <video controls id="previewVideo">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© Sazumi Cloud. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <script>
+        function toggleMobileNavbar() {
+            var x = document.getElementById("mobile-menu");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
+        
+        function getVideoIdFromUrl() {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        function loadVideo(videoId) {
+            var video = document.getElementById("previewVideo");
+            video.src = "/file/" + videoId + ".mp4";
+            video.load();
+        }
+
+        $(document).ready(function() {
+            var videoId = getVideoIdFromUrl();
+            loadVideo(videoId);
+        });
+    </script>
+</body>
+</html>

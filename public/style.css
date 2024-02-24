@@ -1,0 +1,241 @@
+html {
+    font-family: source sans pro, sans-serif;
+  }
+  .legal-area {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  #mobile-menu {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    flex-direction: column;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+  }
+  #mobile-menu a {
+    padding: 16px 24px;
+    font-size: 17px;
+  }
+  .legal-item {
+    display: none;
+  }
+  .legal-menu {
+    padding: 4px;
+  }
+  .headline,
+  .headline-uploading {
+    font-weight: 600;
+    font-size: 29px;
+  }
+  .page-heading {
+    font-size: 24px;
+    padding-bottom: 24px;
+  }
+  .main-area {
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .description,
+  .description-uploading {
+    font-size: 20px;
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+  .headline-uploading,
+  .description-uploading {
+    display: none;
+  }
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  .upload-button-nav {
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 24px;
+    color: #424242;
+    padding: 5px 12px;
+  }
+  .logo-text {
+    font-family: poppins;
+    font-size: 23px;
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
+  .logo-text a {
+    text-decoration: none;
+    color: initial;
+  }
+  body {
+    margin: 0;
+  }
+  .body {
+    padding: 16px;
+  }
+  body.dragging::before {
+    content: "Drop the file anywhere on this page";
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: rgba(78, 78, 78, 0.72);
+    pointer-events: none;
+    color: #e0e0e0;
+    text-align: center;
+    font-weight: 600;
+  }
+  img {
+    width: 81px;
+  }
+  .fa-bars {
+    font-size: 21px;
+    color: #2d2d2d;
+    margin-left: auto;
+  }
+  .legal {
+    display: flex;
+    margin-left: auto;
+  }
+  .legal-item {
+    padding: 0 12px;
+  }
+  .legal-item a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .nav-outer {
+    display: flex;
+    height: 52px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 24px;
+    align-items: center;
+  }
+  .nav-inner {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 1300px;
+    display: flex;
+    align-items: center;
+  }
+  .upload-button {
+    width: 120px;
+    height: 40px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 19px;
+  }
+  .video {
+    max-width: 1024px;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+  .video video {
+    max-height: calc(100vh - 92px);
+  }
+  .video-not-found {
+    font-size: 17px;
+    text-align: center;
+  }
+  .affiliate-ad {
+    padding-top: 12px;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+  .native-unit {
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    max-width: 620px;
+    border-radius: 2px;
+    margin: 0 auto;
+    margin-top: 12px;
+  }
+  .native-unit-inner {
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+  }
+  .native-unit-inner img {
+    max-width: 72px;
+    max-height: 72px;
+    margin-right: 12px;
+  }
+  .native-unit-brand {
+    font-size: 13px;
+  }
+  .native-unit-headline {
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .native-unit-disclosure {
+    text-align: center;
+    padding-top: 8px;
+    font-size: 13px;
+    color: #9b9b9b;
+    margin-bottom: 24px;
+  }
+  @media only screen and (min-width: 768px) {
+    .legal-item {
+      display: initial;
+    }
+    .legal-menu {
+      display: none;
+    }
+    .body {
+      margin: 0;
+    }
+    .video {
+      margin-top: 32px;
+    }
+  }
+  
+  .video {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 32px;
+    overflow: hidden;
+  }
+  
+  .video video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .legal-item {
+        display: initial;
+    }
+    .legal-menu {
+        display: none;
+    }
+  }
+
+  footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 17px;
+    color: #666;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
