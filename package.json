@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sazumi Viki",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
